@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Tour</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%; /* Full width */
+            height: auto; /* Full height */
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
+            display: block; /* Remove space below the image */
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #5f3776;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #5f3776;
+        }
+
+        .back-button .arrow {
+            display: inline-block;
+            margin-right: 8px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            padding: 5px;
+            transform: rotate(135deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">
+        <span class="arrow"></span> Back
+    </button>
+
+    <img src="library entrance.jpeg" alt="Clickable Map" usemap="#image-map" id="responsive-image">
+
+    <map name="image-map">
+        <area shape="rect" href="insidelibrary.html" coords="246,522,503,780" alt="Section 1">
+        <area shape="rect" href="lh.html" coords="0,534,221,806" alt="Section 1">
+    </map>
+
+    <footer>
+        <p>&copy; Batch of 2027-AIML. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function scaleImageMap() {
+        var img = document.getElementById('responsive-image');
+        var width = img.naturalWidth;
+        var height = img.naturalHeight;
+        var areas = document.getElementsByTagName('area');
+
+        // Current image display size
+        var displayWidth = img.clientWidth;
+        var displayHeight = img.clientHeight;
+
+        // Scale factor for the image
+        var xScale = displayWidth / width;
+        var yScale = displayHeight / height;
+
+        // Adjust each area's coordinates based on the scale
+        for (var i = 0; i < areas.length; i++) {
+            var area = areas[i];
+            var coords = area.getAttribute('coords').split(',').map(Number);
+
+            var scaledCoords = coords.map((value, index) => {
+                return index % 2 === 0 ? value * xScale : value * yScale;
+            });
+
+            area.setAttribute('coords', scaledCoords.join(','));
+        }
+    }
+
+    // Run this function when the window is resized
+    window.onload = scaleImageMap;
+    window.onresize = scaleImageMap;
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    
+</body>
+</html>

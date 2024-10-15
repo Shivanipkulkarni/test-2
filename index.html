@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UVCE Transition</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #5f3776;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #252323;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Main section layout */
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #5f3776;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            color: #333;
+            font-size: 1rem;
+        }
+
+        /* Image styling */
+        .section-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        /* Fun facts images */
+        .facts-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2px;
+            position: bottom;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Transition of UVCE</h1>
+    </header>
+
+    <nav>
+        <a href="#transition">Over the Years</a>
+        <a href="campustour.html">Tour Guide</a>
+        <a href="#clubs">Clubs</a>
+    </nav>
+
+    <main>
+        <!-- Section with image -->
+        <section id="about">
+            <h2>How it All Began</h2>
+            <p>In the early 20th century, Sir M. Visvesvaraya had a vision of creating world-class engineers. In 1917, as the Diwan of Mysore, he established the University Visvesvaraya College of Engineering (UVCE) to train engineers in India. The college began with civil engineering courses and has grown into one of India's most prestigious institutions.</p>
+            <img src="uvce_historical_image.jpg" alt="Historical Image of UVCE" class="section-image">
+            <img src="uvce_building.jfif" alt="UVCE Building" class="section-image">
+            <img src="librecord.jpeg" alt="UVCE Building" class="section-image">
+        </section>
+
+        <section id="facts">
+            <h2>Fun Facts About UVCE</h2>
+            <ul>
+                <li>
+                    <h3>UVCE - A Symbol of the Golden Era of Bengaluru</h3>
+                    <p>UVCE was integral in developing Bengaluru during its golden era, producing engineers who shaped the city's identity as the "Silicon Valley of India."</p>
+                </li>
+                <li>
+                    <h3>Pioneered by the Magnificent Trio</h3>
+                    <p>The college was brought to life by the efforts of Maharaja Krishnaraja Wadiyar IV, Sir M. Visvesvaraya, and Sir Mirza Ismail, creating a hub for technical education and innovation.</p>
+                </li>
+                <li>
+                    <h3>The Oldest Book in the City</h3>
+                    <p>The Library has an impressive collection of over 1.55 Lakhs Books (91,000 Titles, and 64,000 volumes) and Journals covering various branches of Engineering.The first book that was registered here is "Strength of materials" written by Arthur Morley bought for rupees 20 from london.</p>
+                </li>
+                <li>
+                    <h3>Noise Cancellation Among the Crowd</h3>
+                    <p>Despite being in the heart of Bengaluru, UVCE offers a calm environment where students can escape the city’s rush and focus on their studies.</p>
+                </li>
+                <li>
+                    <h3>More Capable Students</h3>
+                    <p>UVCE students have earned their place through hard work and resilience, developing the skills to excel in their fields with the support of a strong alumni network.</p>
+                </li>
+            </ul>
+
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Batch of 2027-AIML. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
